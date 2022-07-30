@@ -1,31 +1,36 @@
 import React from "react";
 import styled from "styled-components";
 import { Link, NavLink } from "react-router-dom";
+import { Container } from "@mui/material";
 import logo from "../assets/logo.svg";
+import bg from "../assets/ellipse.svg";
 import { links } from "../utils/constants.js";
 import TopIcons from "./TopIcons";
 
 const Nav = () => {
   return (
-    <NavContainer>
-      <div className="nav-wrapper">
-        <div className="logo-container">
-          <Link to="/">
-            <img src={logo} alt="home nav" />
-          </Link>
+    <Container maxWidth="lg" sx={{ position: "relative" }}>
+      <Img src={bg} alt="ellipse" className="bg" />
+      <NavContainer>
+        <div className="nav-wrapper">
+          <div className="logo-container">
+            <Link to="/">
+              <img src={logo} alt="home nav" />
+            </Link>
+          </div>
+          <div className="nav-links-wrapper">
+            <ul className="nav-links">
+              {links.map((l) => (
+                <li key={l.label}>
+                  <NavLink to={l.to}>{l.label}</NavLink>
+                </li>
+              ))}
+            </ul>
+            <TopIcons />
+          </div>
         </div>
-        <div className="nav-links-wrapper">
-          <ul className="nav-links">
-            {links.map((l) => (
-              <li key={l.label}>
-                <NavLink to={l.to}>{l.label}</NavLink>
-              </li>
-            ))}
-          </ul>
-          <TopIcons />
-        </div>
-      </div>
-    </NavContainer>
+      </NavContainer>
+    </Container>
   );
 };
 
@@ -53,6 +58,15 @@ const NavContainer = styled.nav`
       font-size: 1rem;
     }
   }
+`;
+
+const Img = styled.img`
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-height: 680px;
+  width: 40vw;
+  z-index: -1;
 `;
 
 export default Nav;

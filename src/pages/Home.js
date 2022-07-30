@@ -1,5 +1,5 @@
 import React from "react";
-import { Banner, Collection, Services } from "../components";
+import { Banner, Collection, Services, BestSeller, Soap } from "../components";
 
 const Home = () => {
   return (
@@ -7,7 +7,8 @@ const Home = () => {
       <Banner />
       <Services />
       <Collection />
-      <div style={{ height: "400px" }}></div>
+      <BestSeller />
+      <Soap />
     </main>
   );
 };

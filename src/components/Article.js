@@ -9,18 +9,28 @@ const Article = ({
   variant = "contained",
   btn = "show now",
   label = false,
+  titleFont = "80px",
+  lineHeight = "78.32px",
+  color = "#424b25",
+  btnWidth = "175px",
 }) => {
+  const cssStyle = { titleFont, lineHeight, color };
   return (
-    <Wrapper className="left-section">
+    <Wrapper className="left-section" {...cssStyle}>
       <div>
         {label && <span className="label">New</span>}
         <h1>
-          {title.map((t) => (
-            <span key={t}>{t}</span>
+          {title.map((t, index) => (
+            <span key={t + index}>{t}</span>
           ))}
         </h1>
         <p>{content}</p>
-        <NewBtn variant={variant} color="secondary" href={link}>
+        <NewBtn
+          variant={variant}
+          color="secondary"
+          href={link}
+          width={btnWidth}
+        >
           {btn}
         </NewBtn>
       </div>
@@ -37,8 +47,9 @@ const NewBtn = styled(Button)`
   font-size: 16px;
   line-height: 97.9%;
   letter-spacing: 0.01em;
-  padding: 0.85rem 2.5rem;
+  padding: 0.85rem;
   border-width: 2px;
+  width: ${(props) => props.width};
 `;
 
 const Wrapper = styled.article`
@@ -54,13 +65,13 @@ const Wrapper = styled.article`
     text-transform: capitalize;
   }
   h1 {
-    color: #424b25;
+    color: ${(props) => props.color};
     font-weight: 500;
-    font-size: 5rem;
-    line-height: 78.32px;
+    line-height: ${(props) => props.lineHeight};
     margin-bottom: 0;
     margin-top: 0;
     font-family: "Abril Fatface", "cursive", "Arial";
+    font-size: ${(props) => props.titleFont};
   }
   p {
     font-style: normal;
@@ -69,6 +80,7 @@ const Wrapper = styled.article`
     line-height: 156.5%;
     letter-spacing: 0.01em;
     color: #363d1e;
+    font-family: "Quicksand", sans-serif;
   }
 `;
 

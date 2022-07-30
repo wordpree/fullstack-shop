@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Container } from "@mui/material";
 import Article from "./Article";
 import { banner } from "../utils/constants";
 import bg from "../assets/ellipse.svg";
@@ -7,13 +8,15 @@ import fruit from "../assets/fruit.svg";
 
 const Banner = () => {
   return (
-    <BannerContainer>
-      <Article {...banner} label={true} />
-      <section className="right-section">
-        <img src={bg} alt="bg" className="banner-bg" />
-        <img src={fruit} alt="fruit" className="fruit" />
-      </section>
-    </BannerContainer>
+    <Container maxWidth="lg">
+      <BannerContainer>
+        <Article {...banner} label={true} />
+        <section className="right-section">
+          {/* <img src={bg} alt="bg" className="banner-bg" /> */}
+          <img src={fruit} alt="fruit" className="fruit" />
+        </section>
+      </BannerContainer>
+    </Container>
   );
 };
 const BannerContainer = styled.section`
