@@ -1,5 +1,10 @@
 import best1 from "../assets/best_1.svg";
 import best2 from "../assets/best_2.svg";
+import trend1 from "../assets/basket.svg";
+import trend2 from "../assets/soapbar.svg";
+import blog1 from "../assets/blog_1.png";
+import blog2 from "../assets/blog_2.png";
+import blog3 from "../assets/blog_3.png";
 
 const links = [
   {
@@ -42,6 +47,16 @@ const bseller = {
   btn: "shop all",
   titleFont: "50px",
   lineHeight: "48.95px",
+  color: "#5F6C37",
+};
+
+const trend = {
+  title: ["Trends"],
+  content: "",
+  btn: "shop all",
+  titleFont: "50px",
+  lineHeight: "48.95px",
+  color: "#5F6C37",
 };
 
 const sliderSeller = [
@@ -71,4 +86,57 @@ const sliderSeller = [
   },
 ];
 
-export { links, banner, collection, bseller, sliderSeller };
+const sliderTrend = [
+  {
+    title: "Basket INNER BEAUTY",
+    desc: "Luminescent Nutritive Serum, Rose Petal Hydrosol Mist  and Nourish Mud Cleanser.",
+    price: "$ 64,95",
+    img: trend1,
+  },
+  {
+    title: "Uplift Handcrafted Soap Bar",
+    desc: "Is a peaceful and balancing bar topped with calendula, dried rose petals and lavender.",
+    price: "$ 15,12",
+    img: trend2,
+  },
+  {
+    title: "Neque, quisquam est",
+    desc: "Vestibulum interdum leo sit amet felis tincidunt pulvinar.",
+    price: "$ 18",
+    img: trend2,
+  },
+  {
+    title: " Ipsum, adipisci velit",
+    desc: "Donec sagittis ipsum nec magna rhoncus. Mauris accumsan imperdiet tincidunt.",
+    price: "$ 31",
+    img: trend1,
+  },
+];
+
+const blog = [
+  {
+    title: "How to create your own essential oil diffuser blends",
+    desc: "As you begin creating your own diffuser blends, it’s important to keep a few ...",
+    img: blog1,
+  },
+  {
+    title: "7 easy oil-infused Mother’s Day gift ideas",
+    desc: "Celebrate the mom in your life with these simple, handcrafted, heartfelt gifts!",
+    img: blog2,
+  },
+  {
+    title: "Geranium Bourbon: Fresh, floral, sweet",
+    desc: "Fill your space with a fresh, uplifting aroma reminiscent of a greenhouse in full ...",
+    img: blog3,
+  },
+];
+export {
+  links,
+  banner,
+  collection,
+  bseller,
+  sliderSeller,
+  trend,
+  sliderTrend,
+  blog,
+};

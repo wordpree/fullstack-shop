@@ -4,3 +4,5 @@ export { default as Services } from "./Services";
 export { default as Collection } from "./Collection";
 export { default as BestSeller } from "./BestSeller";
 export { default as Soap } from "./Soap";
+export { default as Trend } from "./Trend";
+export { default as Blog } from "./Blog";
