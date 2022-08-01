@@ -130,6 +130,36 @@ const blog = [
     img: blog3,
   },
 ];
+
+const siteList = [
+  {
+    title: "Customer Support",
+    list: [
+      { label: "Shipping", link: "/shipping" },
+      { label: "Free Returns", link: "#" },
+      { label: "Track Your Order", link: "#" },
+      { label: "Gift Cards", link: "#" },
+    ],
+  },
+  {
+    title: "About Us",
+    list: [
+      { label: "Our Values", link: "#" },
+      { label: "Sustainability", link: "#" },
+      { label: "Brand Ambassadors", link: "#" },
+      { label: "Fitness Professionals", link: "#" },
+    ],
+  },
+  {
+    title: "Customer Service",
+    list: [
+      { label: "Help", link: "#" },
+      { label: "Leader Support", link: "#" },
+      { label: "Pleasant Grove Product Center", link: "#" },
+      { label: "Recall—Important Safety Information", link: "#" },
+    ],
+  },
+];
 export {
   links,
   banner,
@@ -139,4 +169,5 @@ export {
   trend,
   sliderTrend,
   blog,
+  siteList,
 };

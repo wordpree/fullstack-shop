@@ -7,6 +7,8 @@ import {
   Soap,
   Trend,
   Blog,
+  Footer,
+  Policy,
 } from "../components";
 
 const Home = () => {
@@ -19,6 +21,8 @@ const Home = () => {
       <Soap />
       <Trend />
       <Blog />
+      <Footer />
+      <Policy />
     </main>
   );
 };

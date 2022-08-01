@@ -6,3 +6,5 @@ export { default as BestSeller } from "./BestSeller";
 export { default as Soap } from "./Soap";
 export { default as Trend } from "./Trend";
 export { default as Blog } from "./Blog";
+export { default as Footer } from "./Footer";
+export { default as Policy } from "./Policy";
