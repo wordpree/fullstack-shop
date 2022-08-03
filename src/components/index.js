@@ -8,3 +8,4 @@ export { default as Trend } from "./Trend";
 export { default as Blog } from "./Blog";
 export { default as Footer } from "./Footer";
 export { default as Policy } from "./Policy";
+export { default as Product } from "./Product";

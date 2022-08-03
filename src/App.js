@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { Home, About, Shop, Contact } from "./pages";
+import { Home, About, Shop, Contact, Product } from "./pages";
 import Nav from "./components/Nav";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { CssBaseline } from "@mui/material";
@@ -29,6 +29,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/shop" element={<Shop />} />
+        <Route path="/shop/:productId" element={<Product />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </ThemeProvider>
