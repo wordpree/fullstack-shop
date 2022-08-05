@@ -1,15 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import { Grid } from "@mui/material";
-import { Product } from "../components";
+import { Grid, Container } from "@mui/material";
+import { Product, Filter } from "../components";
 import { products } from "../utils/constants";
-import { Container } from "@mui/system";
 
 const Shop = () => {
   return (
     <main>
       <Wrapper>
-        <Container>
+        <Container className="container">
+          <Filter />
           <Grid container spacing={3}>
             {products.map((p) => (
               <Grid key={p.id} xs={12} md={6} lg={4} item>
@@ -23,6 +23,11 @@ const Shop = () => {
   );
 };
 
-const Wrapper = styled.section``;
+const Wrapper = styled.section`
+  margin-top: 4.75rem;
+  .container {
+    display: flex;
+  }
+`;
 
 export default Shop;

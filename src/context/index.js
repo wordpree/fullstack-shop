@@ -2,13 +2,17 @@ import React from "react";
 import action from "./action";
 
 const initialValue = {
-  inputValue: "",
-  category: "all",
-  price: "",
-  freeShipping: false,
-  company: "all",
-  color: "all",
-  reset: false,
+  filter: {
+    inputValue: "",
+    category: "all",
+    price: 0,
+    freeShipping: false,
+    company: "all",
+    color: "all",
+    reset: false,
+    min_price: 0,
+    max_price: 0,
+  },
 };
 
 const ProductFilter = React.createContext(initialValue);

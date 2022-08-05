@@ -14,6 +14,11 @@ const theme = createTheme({
       contrastText: "#fff",
       dark: "#AC7635",
     },
+    filter: {
+      main: "#6F7766",
+      contrastText: "#fff",
+      dark: "#626A59",
+    },
   },
   // typography: {
   //   fontFamily: ["Abril Fatface", "cursive", "Arial", "sans-serif"].join(","),

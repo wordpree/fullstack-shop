@@ -6,7 +6,6 @@ import {
   CardActionArea,
   CardContent,
   Typography,
-  Grid,
 } from "@mui/material";
 
 const Product = ({ name, image, price }) => {
